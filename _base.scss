@@ -1,0 +1,40 @@
+// Mixins and variables
+
+@mixin linear-gradient($dir, $basecolor, $hi:10%, $lo:10%, $pos:100%){
+	background-color: $basecolor;
+	background-image: -webkit-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo) $pos);
+	background-image: -moz-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));
+	background-image: -ms-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));
+	background-image: -o-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));
+	background-image: linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));
+}
+@mixin border-radius($rad) {
+	border-radius:#{$rad};
+	-webkit-border-radius:#{$rad};
+	-moz-border-radius:#{$rad};
+	-ms-border-radius:#{$rad};
+	-o-border-radius:#{$rad};
+}
+@mixin box-shadow($color, $x, $y, $size, $spread) {
+	box-shadow:#{$color} #{$x} #{$y} #{$size} #{$spread};
+	-webkit-box-shadow:#{$color} #{$x} #{$y} #{$size} #{$spread};
+	-moz-box-shadow:#{$color} #{$x} #{$y} #{$size} #{$spread};
+	-ms-box-shadow:#{$color} #{$x} #{$y} #{$size} #{$spread};
+	-o-box-shadow:#{$color} #{$x} #{$y} #{$size} #{$spread};
+}
+@mixin clearfix(){
+	& {
+		*zoom: 1;
+	}
+	&:before,
+	&:after {
+		content: "";
+		display:table;
+	}
+	&:after {
+		clear:both;
+	}
+}
+.clearfix{
+	@include clearfix();
+}
