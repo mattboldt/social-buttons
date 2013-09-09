@@ -1,21 +1,3 @@
-body {
-  margin: 0;
-  font-family: "Lato", "Helvetica Neue", sans-serif;
-  width: 100%; }
-
-.container {
-  padding: 10px 0 0;
-  background: -webkit-radial-gradient(top center, circle, #333333, #111111) no-repeat;
-  color: #fff; }
-
-.light-bg {
-  color: #222;
-  background: -webkit-radial-gradient(top center, circle, white, #f0f0f0) no-repeat; }
-
-.example {
-  background: #f0f0f0;
-  color: #222; }
-
 .sc-btn {
   display: inline-block;
   position: relative;
@@ -578,45 +560,3 @@ svg {
     background-image: -ms-linear-gradient(top, #ec893c, #c96213);
     background-image: -o-linear-gradient(top, #ec893c, #c96213);
     background-image: linear-gradient(top, #ec893c, #c96213); }
-
-.wrap {
-  max-width: 1050px;
-  margin: 50px auto; }
-
-.wide-wrap {
-  max-width: 1250px;
-  margin: auto; }
-
-.grid {
-  margin: 0 auto;
-  padding: 0 0 50px;
-  list-style: none; }
-  .grid li {
-    width: 260px;
-    display: inline-block;
-    vertical-align: top; }
-
-.color-toggle {
-  float: right; }
-
-pre {
-  padding: 10px 5px;
-  max-width: 400px;
-  background: #f8f8f8;
-  color: #333;
-  border: #DDD 1px solid;
-  border-radius: 5px;
-  overflow: auto; }
-
-.inline {
-  display: inline-block; }
-  .inline pre {
-    display: inline-block;
-    padding: 5px; }
-
-.btn-block {
-  display: inline-block;
-  width: 300px;
-  margin: 5px 5px 10px;
-  vertical-align: top;
-  border-bottom: #f0f0f0 1px solid; }

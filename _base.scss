@@ -1,7 +1,7 @@
 // Mixins and variables
 
 @mixin linear-gradient($dir, $basecolor, $hi:10%, $lo:10%, $pos:100%){
-	background-color: $basecolor;
+	background-color: darken($basecolor, $lo);
 	background-image: -webkit-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo) $pos);
 	background-image: -moz-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));
 	background-image: -ms-linear-gradient($dir, lighten($basecolor, $hi), darken($basecolor, $lo));

@@ -1,484 +1,74 @@
 
 body{
+	margin:0;
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+	width:100%;
+}
+
+.container{
+	padding:10px 0 0 ;
 	background:-webkit-radial-gradient(top center,circle, #333, #111) no-repeat;
 	color:#fff;
-	font-family: "Lato", "Helvetica Neue", sans-serif;
 }
 	.light-bg{
 		color:#222;
 		background:-webkit-radial-gradient(top center,circle, #fff, #f0f0f0) no-repeat;
 	}
 
-@import "base";
+.example{
+	background: #f0f0f0;
+	color:#222;
+}
+
+@import "sc-btn.scss";
 
 .wrap{
 	max-width:1050px;
 	margin:50px auto;
 }
+.wide-wrap{
+	max-width: 1250px;
+	margin:auto;
+}
+
+.grid{
+	margin:0 auto;
+	padding:0 0 50px;
+	list-style: none;
+	li{
+		width:260px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.sc-btn{
+		// display: block;
+	}
+}
+
 .color-toggle{
 	float: right;
 }
-.sc-btn{
-	display: inline-block;
-	font-size: 14px;
-	font-family: "Helvetica Neue", "Helvetica", sans-serif;
-	a{
+
+pre{
+	padding:10px 5px;
+	max-width:400px;
+	background:#f8f8f8;
+	color:#333;
+	border:#DDD 1px solid;
+	border-radius:5px;
+	overflow: auto;
+}
+.inline{
+	pre{
 		display: inline-block;
-		position: relative;
-		margin:0 .25em .5em;
-		color:#fff;
-		font-weight: 400;
-		line-height: 1em;
-		text-decoration: none;
-		text-shadow:rgba(0,0,0,0.3) 0px -.1em 0px;
-		border-radius:.35em;
-		$basecolor: #333;
-		@include linear-gradient(top, $basecolor, 15%);
-		box-shadow:inset rgba(0,0,0,0.1) 0px -0.15em 0px, inset rgba(255,255,255,0.2) 0px 0.15em 0px, rgba(0,0,0,0.3) 0px 0.1em .3em;
-		text-align: center;
-		&:active{
-			box-shadow:rgba(255,255,255,0.2) 0 .10em 0, inset rgba(0,0,0,0.3) 0px .25em 1em;
-		}
+		padding:5px;
 	}
-	// Make em' responsive
-	@media screen and (max-width:500px){
-		display: block;
-		a{
-			display: block;
-			overflow: hidden;
-		}
-	}
-	.sc-icon, .sc-text{
-		display: block;
-		float:left;
-	}
-	.sc-icon{
-		margin:0 -.4em 0 0;
-		padding:0.6em .8em .5em;
-		border-right:rgba(255,255,255,0.1) .1em solid;
-		box-shadow:inset rgba(0,0,0,0.1) -.1em 0px 0px;
-	}
-	.sc-text{
-		padding:.95em 1em .85em 1em;
-		font-size: 1.15em;
-		text-align: center;
-	}
-	svg{
-		width:1.8em;
-		height:1.8em;
-		fill:#fff;
-	}
+	display: inline-block;
 }
-
-.sc--big{
-	font-size: 24px;
-}
-.sc--small{
-	font-size: 12px;
-}
-.sc--tiny{
-	font-size: 9px;
-	.sc-text{
-		padding:.85em .75em .5em .75em;
-		text-shadow:rgba(0,0,0,0.3) 0px -1px 0px;
-	}
-	.sc-icon{
-		padding:.5em .75em .5em .75em;
-		border-right:rgba(255,255,255,0.1) 1px solid;
-		box-shadow:inset rgba(0,0,0,0.1) -1px 0px 0px;
-	}
-}
-.sc--short{
-	.sc-icon{
-		padding:0.4em .9em .35em;
-	}
-	.sc-text{
-		padding:.75em 1em .75em 1em;
-	}
-}
-.sc--tall{
-	font-size: 1.15em;
-	.sc-icon{
-		padding:1em .9em .85em;
-	}
-	.sc-text{
-		padding:1.25em 1em 1em 1em;
-	}
-}
-.sc--round{
-	a{
-		border-radius:5em;
-	}
-	.sc-icon{
-		padding:0.7em .8em .5em 1em;
-	}
-}
-.sc--flat{
-	.sc-icon{
-		border-color:transparent;
-	}
-	a{
-		box-shadow:none;
-		background-image:none !important;
-		&:hover{
-			box-shadow:inset rgba(100,100,100,0.1) 0px 5em 0;
-		}
-		&:active{
-			box-shadow:inset rgba(0,0,0,0.3) 0px .15em 0.25em;
-		}
-	}
-}
-
-.sc--shine{
-	a{
-		box-shadow:
-			inset rgba(0,0,0,0.1) 0px -0.15em 0px,
-			inset rgba(255,255,255,0.1) 0px 0.15em 0px,
-			rgba(0,0,0,0.3) 0px 0.1em .3em,
-			inset rgba(255,255,255,0.2) 0px 2.5em 0px -1em;
-		&:active{
-			box-shadow:rgba(255,255,255,0.2) 0 .10em 0, inset rgba(0,0,0,0.3) 0px .25em 1em, inset rgba(255,255,255,0.1) 0px 2.5em 0px -1em;
-		}
-		&:before, &:after{
-			content: "";
-			display: block;
-			position: absolute;
-			width:100%;
-			height:0.1em;
-		}
-		&:before{
-			top:0;
-			background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
-			background-image: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
-			background-image: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
-			background-image: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
-			background-image: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
-		}
-		&:after{
-			bottom:0;
-			background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
-			background-image: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
-			background-image: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
-			background-image: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
-			background-image: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
-		}
-		&:active:before, &:active:after{
-			opacity:0.5;
-		}
-	}
-}
-
-.sc--default{
-	a{
-		color:#222;
-		text-shadow:rgba(255,255,255,0.4) 0 .1em 0;
-		$basecolor: #f8f8f8;
-		@include linear-gradient(top, $basecolor, 5%, 5%);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 15%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--facebook{
-	a{
-		$basecolor: #425c9e;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--twitter{
-	a{
-		$basecolor: #18aaec;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 20%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--tumblr{
-	a{
-		$basecolor: #354f6b;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--instagram{
-	a{
-		$basecolor: #3b6792;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--pinterest{
-	a{
-		$basecolor: #c70428;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--pinterest-inverse{
-	a{
-		color:#c70428;
-		text-shadow:rgba(255,255,255,0.5) 0 .1em 0;
-		$basecolor: #DDD;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 100%, 15%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-	svg{
-		fill:#c70428;
-	}
-}
-.sc--google-plus{
-	a{
-		$basecolor: #d84239;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--dribbble{
-	a{
-		$basecolor: #ed5896;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--flickr{
-	a{
-		$basecolor: #0d63e2;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--forrst{
-	a{
-		$basecolor: #33601e;
-		@include linear-gradient(top, $basecolor, 5%, 5%);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 8%, 5%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 3%, 5%);
-		}
-	}
-}
-.sc--github{
-	a{
-		$basecolor: #4183c4;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--lastfm{
-	a{
-		$basecolor: #bc2020;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--reddit{
-	a{
-		$basecolor: #5e96d1;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--soundcloud{
-	a{
-		$basecolor: #ff4000;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--stack-overflow{
-	a{
-		$basecolor: #fd8a00;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--vimeo{
-	a{
-		$basecolor: #51aacd;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
-}
-.sc--vimeo-styled{
-	a{
-		$basecolor: #5bb3d7;
-		background-color:#5bb3d7;
-		background-image:
-			-webkit-linear-gradient(left,
-			#89daf7 0%, #89daf7 10%,
-			#9fa5a8 10%, #9fa5a8 20%,
-			#f58182 20%, #f58182 30%,
-			#fcf4c0 30%, #fcf4c0 40%,
-			#5bb3d7 40%, #5bb3d7 50%,
-			#6b6b6b 50%, #6b6b6b 60%,
-			#b0d570 60%, #b0d570 70%,
-			#53a4c1 70%, #53a4c1 80%,
-			#9e292c 80%, #9e292c 90%,
-			#d4cd99 90%, #d4cd99 100%);
-		background-image:
-			-moz-linear-gradient(left,
-			#89daf7 0%, #89daf7 10%,
-			#9fa5a8 10%, #9fa5a8 20%,
-			#f58182 20%, #f58182 30%,
-			#fcf4c0 30%, #fcf4c0 40%,
-			#5bb3d7 40%, #5bb3d7 50%,
-			#6b6b6b 50%, #6b6b6b 60%,
-			#b0d570 60%, #b0d570 70%,
-			#53a4c1 70%, #53a4c1 80%,
-			#9e292c 80%, #9e292c 90%,
-			#d4cd99 90%, #d4cd99 100%);
-		background-image:
-			-ms-linear-gradient(left,
-			#89daf7 0%, #89daf7 10%,
-			#9fa5a8 10%, #9fa5a8 20%,
-			#f58182 20%, #f58182 30%,
-			#fcf4c0 30%, #fcf4c0 40%,
-			#5bb3d7 40%, #5bb3d7 50%,
-			#6b6b6b 50%, #6b6b6b 60%,
-			#b0d570 60%, #b0d570 70%,
-			#53a4c1 70%, #53a4c1 80%,
-			#9e292c 80%, #9e292c 90%,
-			#d4cd99 90%, #d4cd99 100%);
-		background-image:
-			-o-linear-gradient(left,
-			#89daf7 0%, #89daf7 10%,
-			#9fa5a8 10%, #9fa5a8 20%,
-			#f58182 20%, #f58182 30%,
-			#fcf4c0 30%, #fcf4c0 40%,
-			#5bb3d7 40%, #5bb3d7 50%,
-			#6b6b6b 50%, #6b6b6b 60%,
-			#b0d570 60%, #b0d570 70%,
-			#53a4c1 70%, #53a4c1 80%,
-			#9e292c 80%, #9e292c 90%,
-			#d4cd99 90%, #d4cd99 100%);
-		background-image:
-			linear-gradient(left,
-			#89daf7 0%, #89daf7 10%,
-			#9fa5a8 10%, #9fa5a8 20%,
-			#f58182 20%, #f58182 30%,
-			#fcf4c0 30%, #fcf4c0 40%,
-			#5bb3d7 40%, #5bb3d7 50%,
-			#6b6b6b 50%, #6b6b6b 60%,
-			#b0d570 60%, #b0d570 70%,
-			#53a4c1 70%, #53a4c1 80%,
-			#9e292c 80%, #9e292c 90%,
-			#d4cd99 90%, #d4cd99 100%);
-
-		&:hover{
-			box-shadow:inset rgba(0,0,0,0.1) 0px -0.15em 0px, inset rgba(255,255,255,0.2) 0px 0.15em 0px, rgba(0,0,0,0.3) 0px 0.1em .3em, inset rgba(255,255,255,0.4) 0px 1em 3em;
-		}
-		&:active{
-			box-shadow:rgba(255,255,255,0.2) 0 .10em 0, inset rgba(0,0,0,0.3) 0px .25em 1em;
-		}
-	}
-}
-.sc--rss{
-	a{
-		$basecolor: #ea7b25;
-		@include linear-gradient(top, $basecolor);
-		&:hover{
-			@include linear-gradient(top, $basecolor, 15%, 12%, 90%);
-			background-color:lighten($basecolor, 10%);
-		}
-		&:active{
-			@include linear-gradient(top, $basecolor, 5%);
-		}
-	}
+.btn-block{
+	display: inline-block;
+	width:300px;
+	margin:5px 5px 10px;
+	vertical-align: top;
+	border-bottom:#f0f0f0 1px solid;
 }
