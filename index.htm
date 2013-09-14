@@ -22,7 +22,9 @@
 				}
 			});
 			$(".sc-btn").click(function(e){
-				e.preventDefault();
+				if ($(this).attr("href") === "#"){
+					e.preventDefault();
+				}
 			});
 		});
 	</script>
@@ -151,20 +153,20 @@
 	</li>
 
 	<div class="dl-wrap">
-		<a href="https://raw.github.com/mattboldt/social-buttons/master/css/sc-btn.css" class="sc-btn sc--default sc--tall">
+		<a href="https://raw.github.com/mattboldt/social-buttons/master/css/sc-btn.css" class="sc-btn sc--default sc--tall" data-active="true">
 			<span class="sc-icon">
 				<svg width="25" height="25" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 16.5,18.563L 24.75,10.313L 18.563,10.313L 18.563,2.063L 14.438,2.063L 14.438,10.313L 8.25,10.313 zM 24,15.187L 21.688,17.499L 30.070,20.625L 16.5,25.685L 2.93,20.625L 11.312,17.499L 9,15.187L0,18.563L0,26.813L 16.5,33L 33,26.813L 33,18.563 z"></path></g></svg>
 			</span>
 			<span class="sc-text">Download CSS</span>
 		</a>
-		<a href="https://github.com/mattboldt/social-buttons/archive/master.zip" class="sc-btn sc--default sc--tall">
+		<a href="https://github.com/mattboldt/social-buttons/archive/master.zip" class="sc-btn sc--default sc--tall" data-active="true">
 			<span class="sc-icon">
 				<svg width="25" height="25" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 16.5,18.563L 24.75,10.313L 18.563,10.313L 18.563,2.063L 14.438,2.063L 14.438,10.313L 8.25,10.313 zM 24,15.187L 21.688,17.499L 30.070,20.625L 16.5,25.685L 2.93,20.625L 11.312,17.499L 9,15.187L0,18.563L0,26.813L 16.5,33L 33,26.813L 33,18.563 z"></path></g></svg>
 			</span>
 			<span class="sc-text">Download Full Source</span>
 		</a>
 		<br />
-		<p>Made with love by <a href="http://www.mattbodt.com/">Matt Boldt</a>.</p>
+		<p>Made with love by <a href="http://www.mattboldt.com/">Matt Boldt</a>.</p>
 		<p>If you'd like, share this page on Twitter. Or buy me a coffee -- I'm actually about to run out...</p>
 				<div style="display:block;margin:5px auto 0;">
 		<form style="display:inline-block" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -191,6 +193,7 @@
 </div>
 
 <div class="wide-wrap">
+		<p><small>(this page is a Beta. It will look prettier, I promise!)</small></p>
 
 <p><strong>Copy and paste away!</strong> Just remember to include the propper CSS document.</p>
 
