@@ -29,6 +29,8 @@
   -webkit-appearance: none;
   cursor: pointer;
   overflow: hidden; }
+  .sc-btn:hover {
+    color: #fff; }
   .sc-btn:active {
     box-shadow: rgba(255, 255, 255, 0.2) 0 0.1em 0, inset rgba(0, 0, 0, 0.3) 0px 0.25em 1em; }
 
@@ -136,7 +138,10 @@ svg {
   background-image: -ms-linear-gradient(top, white, #ebebeb);
   background-image: -o-linear-gradient(top, white, #ebebeb);
   background-image: linear-gradient(top, white, #ebebeb); }
+  .sc--default svg {
+    fill: #222; }
   .sc--default:hover {
+    color: #222;
     background-color: #d2d2d2;
     background-image: -webkit-linear-gradient(top, white, #d2d2d2 90%);
     background-image: -moz-linear-gradient(top, white, #d2d2d2);

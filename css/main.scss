@@ -5,6 +5,14 @@ body{
 	width:100%;
 }
 
+a{
+	color:#08C;
+	text-decoration: none;
+	&:hover{
+		color:lighten(#08C, 10%);
+	}
+}
+
 .header{
 	padding:10px 0 0 ;
 	background:-webkit-radial-gradient(top center,circle, #333, #111) no-repeat;
@@ -24,8 +32,6 @@ body{
 	color:#222;
 }
 
-@import "sc-btn.scss";
-
 .wrap{
 	max-width:1050px;
 	margin:50px auto;
@@ -36,13 +42,10 @@ body{
 	margin:auto;
 }
 
-pre{
-	display: none;
-}
 
 .grid{
 	margin:0 auto;
-	padding:0 0 50px;
+	padding:0 0 40px;
 	list-style: none;
 	text-align: center;
 	li{
@@ -83,4 +86,11 @@ pre{
 	margin:5px 5px 10px;
 	vertical-align: top;
 	border-bottom:#f0f0f0 1px solid;
+}
+
+.dl-wrap{
+	border-top:rgba(255,255,255,0.1) 1px solid;
+	margin:20px auto 0;
+	padding:30px 0;
+	box-shadow:rgba(0,0,0,0.4) 0px -1px 0px;
 }

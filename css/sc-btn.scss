@@ -40,9 +40,9 @@
 	-webkit-appearance:none;
 	cursor: pointer;
 	overflow: hidden;
-	// &:hover{
-	// 	background-position: 0 -.5em;
-	// }
+	&:hover{
+		color:#fff;
+	}
 	&:active{
 		box-shadow:rgba(255,255,255,0.2) 0 .10em 0, inset rgba(0,0,0,0.3) 0px .25em 1em;
 	}
@@ -173,7 +173,11 @@
 	text-shadow:rgba(255,255,255,0.4) 0 .1em 0;
 	$basecolor: #f8f8f8;
 	@include linear-gradient(top, $basecolor, 5%, 5%);
+	svg{
+		fill:#222;
+	}
 	&:hover{
+		color:#222;
 		@include linear-gradient(top, $basecolor, 15%, 15%, 90%);
 		background-color:lighten($basecolor, 2%);
 	}
