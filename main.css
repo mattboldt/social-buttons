@@ -3,10 +3,13 @@ body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   width: 100%; }
 
-.container {
+.header {
   padding: 10px 0 0;
   background: -webkit-radial-gradient(top center, circle, #333333, #111111) no-repeat;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
+  .header h1 {
+    font-size: 3em; }
 
 .light-bg {
   color: #222;
@@ -581,7 +584,8 @@ svg {
 
 .wrap {
   max-width: 1050px;
-  margin: 50px auto; }
+  margin: 50px auto;
+  position: relative; }
 
 .wide-wrap {
   max-width: 1250px;
@@ -590,14 +594,17 @@ svg {
 .grid {
   margin: 0 auto;
   padding: 0 0 50px;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
   .grid li {
-    width: 260px;
+    width: auto;
+    margin-right: 20px;
     display: inline-block;
     vertical-align: top; }
 
 .color-toggle {
-  float: right; }
+  right: 0;
+  position: absolute; }
 
 pre {
   padding: 10px 5px;
