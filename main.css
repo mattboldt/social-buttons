@@ -591,6 +591,9 @@ svg {
   max-width: 1250px;
   margin: auto; }
 
+pre {
+  display: none; }
+
 .grid {
   margin: 0 auto;
   padding: 0 0 50px;
