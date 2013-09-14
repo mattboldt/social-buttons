@@ -1,3 +1,25 @@
+
+/* -------------------------------------------------
+----------------------------------------------------
+	MATTBOLDT.COM
+	Copyright (c) 2013 Matt Boldt
+----------------------------------------------------
+----------------------------------------------------
+	CODE IS AVAILABLE FOR USE FREE OF CHARGE
+	UNDER THE MIT LICENSE
+	http://opensource.org/licenses/MIT
+----------------------------------------------------
+----------------------------------------------------
+	If you'd like to credit me, or even donate
+	a few bucks that'd be very much appreciated!
+	Visit http://www.mattboldt.com/demos/social-buttons/
+	for more info.
+----------------------------------------------------
+-------------------------------------------------- */
+
+
+
+
 // Mixins and variables
 @mixin linear-gradient($dir, $basecolor, $hi:10%, $lo:10%, $pos:100%){
 	background-color: darken($basecolor, $lo);
